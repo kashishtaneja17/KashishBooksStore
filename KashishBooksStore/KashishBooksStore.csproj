@@ -20,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\KashishBooks.DataAccess\KashishBooks.DataAccess.csproj" />
     <ProjectReference Include="..\KashishBooks.Models\KashishBooks.Models.csproj" />
+    <ProjectReference Include="..\KashishBooks.Utility\KashishBooks.Utility.csproj" />
   </ItemGroup>
 
 </Project>
