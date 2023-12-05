@@ -31,4 +31,8 @@
     <ProjectReference Include="..\KashishBooks.Utility\KashishBooks.Utility.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Views\CoverType\" />
+  </ItemGroup>
+
 </Project>
