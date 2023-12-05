@@ -154,20 +154,20 @@
 
     <script>
 
-    tinymce.init({
-        selector: 'textarea',
-        plugins: 'lists',
-        menubar: 'file edit format'
-    });
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'lists',
+            menubar: 'file edit format'
+        });
 
 
-    function validateInput() {
-        if (document.getElementById("uploadBox").value == "") {
-            swal("Error", "Please select an image", "error");
-            return false;
+        function validateInput() {
+            if (document.getElementById("uploadBox").value == "") {
+                swal("Error", "Please select an image", "error");
+                return false;
+            }
+            return true;
         }
-        return true;
-    }
 
     </script>
 }

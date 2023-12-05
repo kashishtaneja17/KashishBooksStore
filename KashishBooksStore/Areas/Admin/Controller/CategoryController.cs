@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace KashishBooksStore.Areas.Admin.Controllers
 {
-
     [Area("Admin")]
     public class CategoryController : Controller
     {
@@ -22,8 +21,8 @@ namespace KashishBooksStore.Areas.Admin.Controllers
         public IActionResult Index()
         {
             return View();
-
         }
+
         public IActionResult Upsert(int? id)
         {
             Category category = new Category();
@@ -40,7 +39,7 @@ namespace KashishBooksStore.Areas.Admin.Controllers
             }
             return View(category);
         }
-        //use HTTP Post to define the post-action method
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(Category category)
@@ -61,13 +60,15 @@ namespace KashishBooksStore.Areas.Admin.Controllers
             return View(category);
         }
 
-        //API Calls Here
         #region API CALLS
+
+        [HttpGet]
         public IActionResult GetAll()
         {
             var allObj = _unitOfWork.Category.GetAll();
             return Json(new { data = allObj });
         }
+
         [HttpDelete]
         public IActionResult Delete(int id)
         {
@@ -80,9 +81,8 @@ namespace KashishBooksStore.Areas.Admin.Controllers
             _unitOfWork.Save();
             return Json(new { success = true, message = "Delete Successful" });
         }
+
         #endregion
-
-
 
     }
 }

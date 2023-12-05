@@ -1,5 +1,6 @@
 ﻿using KashishBooks.DataAccess.Repository.IRepository;
 using KashishBooks.Models;
+using KashishBooks.Models.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -33,12 +34,12 @@ namespace KashishBooksStore.Areas.Admin.Controllers
             ProductVM productVM = new ProductVM()
             {
                 Product = new Product(),
-                CategoryList = _unitOfWork.Category.GetAll().Select(i => new SelectListItem
+                CategoryList = (IEnumerable<System.Web.Mvc.SelectListItem>)_unitOfWork.Category.GetAll().Select(i => new SelectListItem
                 {
                     Text = i.Name,
                     Value = i.Id.ToString()
                 }),
-                CoverTypeList = _unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
+                CoverTypeList = (IEnumerable<System.Web.Mvc.SelectListItem>)_unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
                 {
                     Text = i.Name,
                     Value = i.Id.ToString()
@@ -110,12 +111,12 @@ namespace KashishBooksStore.Areas.Admin.Controllers
             }
             else
             {
-                productVM.CategoryList = _unitOfWork.Category.GetAll().Select(i => new SelectListItem
+                productVM.CategoryList = (IEnumerable<System.Web.Mvc.SelectListItem>)_unitOfWork.Category.GetAll().Select(i => new SelectListItem
                 {
                     Text = i.Name,
                     Value = i.Id.ToString()
                 });
-                productVM.CoverTypeList = _unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
+                productVM.CoverTypeList = (IEnumerable<System.Web.Mvc.SelectListItem>)_unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
                 {
                     Text = i.Name,
                     Value = i.Id.ToString()

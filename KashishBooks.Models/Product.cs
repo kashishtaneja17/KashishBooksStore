@@ -38,7 +38,7 @@ namespace KashishBooks.Models
         public Category Category { get; set; }
         [Required]
         public int CoverTypeId { get; set; }
-        [System.ComponentModel.DataAnnotations.Schema.ForeignKey("CoverTypeId")]
+        [ForeignKey("CoverTypeId")]
         public CoverType CoverType { get; set; }
     }
 }

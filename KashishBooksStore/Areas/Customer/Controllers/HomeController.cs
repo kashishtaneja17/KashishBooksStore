@@ -1,4 +1,5 @@
 ﻿using KashishBooks.DataAccess.Repository.IRepository;
+using KashishBooks.Models;
 using KashishBooksStore.Models;
 using KashishBooksStore.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -23,7 +24,11 @@ namespace KashishBooksStore.Area.Customer.Controllers
             _unifOfWork = unifOfWork;
         }
 
-      
+        public IActionResult Index()
+        {
+            IEnumerable<Product> productList = (IEnumerable<Product>)_unifOfWork.Product.GetAll(includeProperties: "Category,CoverType");
+            return View(productList);
+        }
 
         public IActionResult Privacy()
         {
