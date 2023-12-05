@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace KashishBooksStore.DataAccess.Data
-
+{ 
     public class ApplicationDbContext : IdentityDbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
