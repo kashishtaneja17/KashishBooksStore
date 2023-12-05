@@ -1,4 +1,5 @@
-﻿using KashishBooksStore.Models;
+﻿using KashishBooks.DataAccess.Repository.IRepository;
+using KashishBooksStore.Models;
 using KashishBooksStore.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -14,16 +15,15 @@ namespace KashishBooksStore.Area.Customer.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IUnitOfWork _unifOfWork;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IUnitOfWork unifOfWork)
         {
             _logger = logger;
+            _unifOfWork = unifOfWork;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+      
 
         public IActionResult Privacy()
         {
