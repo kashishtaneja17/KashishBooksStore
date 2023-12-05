@@ -16,6 +16,7 @@ namespace KashishBooks.DataAccess.Repository.IRepository
             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
             string includeProperties = null
             );
+
         T GetFirstOrDefault(
             Expression<Func<T, bool>> filter = null,
             string includeProperties = null
