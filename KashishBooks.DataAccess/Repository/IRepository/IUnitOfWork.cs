@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace KashishBooks.DataAccess.Repository.IRepository
 {
-    public interface UnitOfWork : IDisposable
+    public interface IUnitOfWork : IDisposable
     {
         ICategoryRepository Category { get; }
+       
         ISP_Call SP_Call { get; }
+
+        void Save();
     }
 }

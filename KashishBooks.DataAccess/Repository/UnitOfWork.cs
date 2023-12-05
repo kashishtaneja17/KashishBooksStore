@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace KashishBooks.DataAccess.Repository
 {
-    public class UnitOfWork 
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _db;
 
@@ -16,12 +16,12 @@ namespace KashishBooks.DataAccess.Repository
         {
             _db = db;
             Category = new CategoryRepository(_db);
-       
+        
             SP_Call = new SP_Call(_db);
         }
 
         public ICategoryRepository Category { get; private set; }
-
+    
         public ISP_Call SP_Call { get; private set; }
 
         public void Dispose()

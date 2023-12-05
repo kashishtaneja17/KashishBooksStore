@@ -1,4 +1,5 @@
 /*using KashishBooksStore.Data;*/
+using KashishBooks.DataAccess.Repository;
 using KashishBooksStore.DataAccess.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -35,6 +36,7 @@ namespace KashishBooksStore
          /*   options => options.SignIn.RequireConfirmedAccount = true*/
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllersWithViews();
         }
 
