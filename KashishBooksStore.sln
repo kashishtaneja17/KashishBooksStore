@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33801.447
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KashishBooksStore", "KashishBooksStore\KashishBooksStore.csproj", "{B444BBA0-602E-4D69-A2D2-D1ACDA1B15F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KashishBooksStore", "KashishBooksStore\KashishBooksStore.csproj", "{B444BBA0-602E-4D69-A2D2-D1ACDA1B15F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KashishBooks.DataAccess", "KashishBooks.DataAccess\KashishBooks.DataAccess.csproj", "{FFE4E5E3-C4C9-4E29-A71B-422002082EA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KashishBooks.DataAccess", "KashishBooks.DataAccess\KashishBooks.DataAccess.csproj", "{FFE4E5E3-C4C9-4E29-A71B-422002082EA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KashishBooks.Models", "KashishBooks.Models\KashishBooks.Models.csproj", "{2D2EE57E-E8B5-49A0-99E0-5E65F130FDB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KashishBooks.Models", "KashishBooks.Models\KashishBooks.Models.csproj", "{2D2EE57E-E8B5-49A0-99E0-5E65F130FDB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KashishBooks.Utility", "KashishBooks.Utility\KashishBooks.Utility.csproj", "{1D02F0E5-4E45-435A-9423-52178188C037}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KashishBooks.Utility", "KashishBooks.Utility\KashishBooks.Utility.csproj", "{1D02F0E5-4E45-435A-9423-52178188C037}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DDB1E342-646D-45D9-9B09-744B813E2E3D}"
+	ProjectSection(SolutionItems) = preProject
+		README.txt = README.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
