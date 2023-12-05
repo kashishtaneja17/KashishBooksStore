@@ -1,5 +1,6 @@
 /*using KashishBooksStore.Data;*/
 using KashishBooks.DataAccess.Repository;
+using KashishBooks.DataAccess.Repository.IRepository;
 using KashishBooksStore.DataAccess.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

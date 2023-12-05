@@ -25,13 +25,15 @@ namespace KashishBooksStore.Areas.Admin.Controllers
 
         }
         //API Calls Here
-        #region API CALLS
+ #region API CALLS
         public IActionResult GetAll()
         {
             var allObj = _unitOfWork.Category.GetAll();
             return Json(new { data = allObj });
         }
         #endregion
+     
+
 
     }
 }
